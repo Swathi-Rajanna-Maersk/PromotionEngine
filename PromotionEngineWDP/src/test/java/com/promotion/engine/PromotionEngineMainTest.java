@@ -104,4 +104,70 @@ class PromotionEngineMainTest {
     PromotionEngineMain.main(null);
     assertEquals(45, PromotionEngineMain.totalAmount);
   }
+
+  @Test
+   void scenarioCtest10() {
+    String userInput = "1" + System.getProperty("line.separator") + "4-A"
+        + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(180, PromotionEngineMain.totalAmount);
+  }
+
+  @Test
+   void scenarioCtest11() {
+    String userInput = "1" + System.getProperty("line.separator") + "3-B"
+        + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(75, PromotionEngineMain.totalAmount);
+  }
+
+  @Test
+   void scenarioCtest12() {
+    String userInput = "2" + System.getProperty("line.separator") + "1-C"
+        + System.getProperty("line.separator") + "1-D" + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(15, PromotionEngineMain.totalAmount);
+  }
+
+  @Test
+   void scenarioCtest13() {
+    String userInput = "2" + System.getProperty("line.separator") + "2-C"
+        + System.getProperty("line.separator") + "1-D" + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(35, PromotionEngineMain.totalAmount);
+  }
+
+  @Test
+   void scenarioCtest14() {
+
+    String userInput = "4" + System.getProperty("line.separator") + "1-A"
+        + System.getProperty("line.separator") + "1-B" + System.getProperty("line.separator") + "1-C"
+        + System.getProperty("line.separator") + "1-D" + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+
+    System.setIn(inputStream);
+
+    PromotionEngineMain.main(null);
+    assertEquals(95, PromotionEngineMain.totalAmount);
+  }
+
+  @Test
+   void scenarioCtest15() {
+
+    String userInput = "4" + System.getProperty("line.separator") + "4-A"
+        + System.getProperty("line.separator") + "5-B" + System.getProperty("line.separator") + "3-C"
+        + System.getProperty("line.separator") + "2-D" + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(350, PromotionEngineMain.totalAmount);
+  }
 }
