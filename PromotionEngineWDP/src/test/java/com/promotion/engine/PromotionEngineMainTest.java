@@ -52,4 +52,56 @@ class PromotionEngineMainTest {
     PromotionEngineMain.main(null);
     assertEquals(15, PromotionEngineMain.totalAmount);
   }
+
+  @Test
+   void scenarioBtest5() {
+    String userInput = "2" + System.getProperty("line.separator") + "1-A"
+        + System.getProperty("line.separator") + "1-B" + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(80, PromotionEngineMain.totalAmount);
+  }
+
+  @Test
+   void scenarioBtest6() {
+    String userInput = "3" + System.getProperty("line.separator") + "1-A"
+        + System.getProperty("line.separator") + "1-B" + System.getProperty("line.separator") + "1-C"
+        + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(100, PromotionEngineMain.totalAmount);
+  }
+
+  @Test
+   void scenarioBtest7() {
+    String userInput = "3" + System.getProperty("line.separator") + "1-A"
+        + System.getProperty("line.separator") + "1-B" + System.getProperty("line.separator") + "1-D"
+        + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(95, PromotionEngineMain.totalAmount);
+  }
+
+  @Test
+   void scenarioBtest8() {
+    String userInput = "1" + System.getProperty("line.separator") + "3-A"
+        + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(130, PromotionEngineMain.totalAmount);
+  }
+
+  @Test
+   void scenarioBtest9() {
+    String userInput = "1" + System.getProperty("line.separator") + "2-B"
+        + System.getProperty("line.separator");
+    InputStream inputStream = new ByteArrayInputStream(userInput.getBytes());
+    System.setIn(inputStream);
+    PromotionEngineMain.main(null);
+    assertEquals(45, PromotionEngineMain.totalAmount);
+  }
 }
