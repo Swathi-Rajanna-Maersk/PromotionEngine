@@ -51,6 +51,7 @@ public class PromotionEngineMain implements PromotionDiscount {
     new PromotionEngineMain().calculateDiscount(items);
 
     System.out.println("Total Amount after discount is : {} "+ totalAmount);
+    items.clear();
   }
 
   @Override
